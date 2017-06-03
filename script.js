@@ -1,18 +1,21 @@
-var today = new Date();
-var dd = today.getDate();
-var mm = today.getMonth()+1; //January is 0!
-var yyyy = today.getFullYear();
+var today = new Date(); 
+var datetime = "Last Sync: " + today.getDate() + "/" + (today.getMonth()+1)  + "/" + today.getFullYear() + " @ "  
+    + today.getHours() + ":"   + today.getMinutes() + ":" + today.getSeconds();
 
-if(dd<10) {
-    dd='0'+dd
-} 
+var inaugurationDay = new Date(2020, 1, 20, 12, 00, 1, 1);
 
-if(mm<10) {
-    mm='0'+mm
-} 
-
-today = mm+'/'+dd+'/'+yyyy;
-
-if(today == ){
-
+function isTrumpPresident(){
+    if (today > inaugurationDay){
+        return "no";
+    }
+    else{
+        return "yes"
+    }
 }
+
+function daysLeft(){
+    return Math.round(Math.abs((inaugurationDay.getTime() - today.getTime())/(86400000)));
+}
+
+document.getElementById('wellIsHe').innerHTML = isTrumpPresident();
+document.getElementById('daysLeft').innerHTML = daysLeft();
