@@ -6,10 +6,10 @@ var inaugurationDay = new Date(2020, 1, 20, 12, 00, 1, 1);
 
 function isTrumpPresident(){
     if (today > inaugurationDay){
-        return "no";
+        return "No.";
     }
     else{
-        return "yes"
+        return "Yes."
     }
 }
 
@@ -18,4 +18,5 @@ function daysLeft(){
 }
 
 document.getElementById('wellIsHe').innerHTML = isTrumpPresident();
-document.getElementById('daysLeft').innerHTML = daysLeft();
+//document.getElementById('daysLeft').innerHTML = daysLeft();
+document.body.innerHTML = document.body.innerHTML.replace('#number', daysLeft());
