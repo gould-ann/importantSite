@@ -6,7 +6,7 @@ var inaugurationDay = new Date(2020, 1, 20, 12, 00, 1, 1);
 
 function isTrumpPresident(){
     if (today > inaugurationDay){
-        return "No.";
+        return "No. Well Maybe. Hopefully not.";
     }
     else{
         return "Yes."
