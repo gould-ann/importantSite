@@ -2,7 +2,7 @@ var today = new Date();
 var datetime = "Last Sync: " + today.getDate() + "/" + (today.getMonth()+1)  + "/" + today.getFullYear() + " @ "  
     + today.getHours() + ":"   + today.getMinutes() + ":" + today.getSeconds();
 
-var inaugurationDay = new Date(2020, 1, 20, 12, 00, 1, 1);
+var inaugurationDay = new Date(2021, 1, 20, 12, 00, 1, 1);
 
 function isTrumpPresident(){
     if (today > inaugurationDay){
